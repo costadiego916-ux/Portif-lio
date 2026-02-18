@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#Inicio" class="menu-link">Inicio</a></li>
+            <li><a href="#Sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#Projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#Contatos" class="menu-link">Contatos</a></li>
+        </ul>
+
+
+
+
+</nav>
+    <main id="Inicio" class="Cabeçalho">
+        <div>
+            <img src="PERFIL.jpg" alt="foto diego" class="fotodiego">
+            <h1 class="meunome">Diego da Costa Almeida</h1>
+            
+
+        </div>
+
+
+    </main>
+    <section id="Sobre" class="Sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Estudante de programação com foco em Python, buscando oportunidade de estágio na área de desenvolvimento.
+                Sou dedicado, proativo e estou sempre em busca de aprimorar minhas habilidades técnicas e aprender novas tecnologias para crescer na área de desenvolvimento.
+
+            </p>
+
+        </div>
+
+
+    </section>
+    <section id="Projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+
+        <div class="projetos-caixa">
+
+
+
+           
+            </div>
+             <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="hotel.jpg" alt="foto hotel" class="projeto-imagem">
+
+                <div class="espaço-caixas"><h3 class="info-projetos">Hotel</h3>
+                <p class="projeto-paragrafo">Se hospede com conforto!</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="python.webp" alt="foto python" class="projeto-imagem">
+                <div class="espaço-caixas"><h3 class="info-projetos">Automação</h3>
+                <p class="projeto-paragrafo">Cadastro de produtos automatizados com Python</p>
+                </div>
+            </div>
+
+              <div class="projetos-card">
+                <img src="pizza.jpg" alt="foto pizza" class="projeto-imagem">
+                <div class="espaço-caixas"><h3 class="info-projetos">Pizzaria</h3>
+                <p class="projeto-paragrafo">Venha Saborear nossas pizzas</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+    <section id="Contatos" class="Contatos">
+        <h2 class="contatos-titulo">Contatos</h2>
+        <div>
+        <form class="formulario-contatos" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="Nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="Mensagem" ></textarea>
+            </div>
+              <button type="submit" class="campo-form" id="botao-wats"> Enviar WhatsApp </button>
+
+            </div>
+            
+            
+
+
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+            
+            
+
+
+
+
+        const Nome = document.getElementById('Nome').value;
+        const Mensagem = document.getElementById('Mensagem').value;
+        const telefone = '5561995519556'
+
+        const texto = `Olá me chamo ${Nome},${Mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+        console.log(url)
+
+        window.open(url,'_blank')
+        }
+
+    </script>
+    
+</body>
+</html>

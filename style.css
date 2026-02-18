@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(fundo.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    opacity: 5;
+}
+.navegacao {
+    position: fixed;
+    top: 0;
+    background:  #000062 ;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content:center ;
+    font-size: 1.5rem;
+}
+.menu-link {
+text-decoration: none;
+color: antiquewhite;
+font-weight: 500;
+position: relative;
+padding: 0.5rem 0;
+
+}
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg,green,white);
+    transition: widht 0.5s ease;
+    }
+
+    
+    .menu-link:hover::after{
+        width: 100%;
+    
+  }
+
+  .fotodiego{
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 20px rgba(79,70,229,0.21);
+    border-radius: 50%;
+    border: 4px solid #1306fb;
+    display: block;
+    margin: 80px auto 0;
+    animation: flutuar 5s ease-in-out infinite;
+  }
+
+  .meunome{
+    text-align: center;
+    font-size: 40px;
+    color: aliceblue;
+  }
+  .cabeçalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 3.5rem;
+    color: rgb(13, 14, 13);
+    font-weight: bold;
+    margin: 20px;
+  }
+  .sub-titulo{
+    font-size: 2rem;
+    color: rgb(7, 7, 7);
+    
+  }
+  .sub-titulo{
+    font-size: 1.5rem;
+    color: rgb(9, 9, 9);
+  }
+
+  .sobre{
+    padding: 6rem 2rem;
+    
+  }
+  .sobre-titulo{
+    font-size: 2.4rem;
+    color: rgb(9, 9, 8);
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+
+  .sobre-caixa{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid rgb(4, 4, 4);
+    backdrop-filter: blur(10px);
+    background: rgba(8, 8, 8, 0.05);
+  }
+  .sobre-paragrafo{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(6, 4, 1);
+  }
+
+
+  .projeto-imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    
+
+  }
+
+  .projetos{
+    padding: 6rem 2rem;
+  }
+
+  .projetos-caixa {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+
+  .projetos-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(83, 83, 85);
+    overflow: hidden;
+    transition: all 0,5s ease;
+    cursor: pointer;
+  }
+  
+  .projetos-card:hover {
+    box-shadow:  0 10px 20px rgba(79,70,229,0.2) ;
+    transform: translateY(-10px) scale(1.05);
+  }
+
+
+
+  .projetos-titulo {
+    text-align: center;
+    font-size: 2.0rem;
+    margin-bottom: 50px;
+    color: aliceblue;
+  }
+
+  .projeto-paragrafo {
+    color: white;
+    line-height: 1.25rem;
+    color: black;
+
+  }
+  .espaço-caixas {
+    padding: 1.5rem;
+    color: rgb(10, 11, 11);
+    background-color: rgb(241, 242, 242);
+    
+  }
+.info.projetos {
+    font-size: 5rem;
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+.Contatos{
+    padding: 6rem 2rem;
+}
+
+
+
+.contatos-titulo{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-size: 4rem;
+    color: azure;
+}
+
+
+
+.formulario-contatos{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid rgb(10, 10, 11);
+    border-radius: 16px;
+
+
+}
+
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+
+
+}
+
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    color: rgb(1, 8, 8);
+    border: 1px solid black;
+    outline: none;
+    background-color: rgba(236, 244, 236, 0.971);
+    
+    
+}
+
+
+
+
+.campo-form:focus{
+    border-color: var(black);
+    box-shadow: rgb(10, 10, 11);
+}
+#botao-wats{
+  background-color: green;
+   border-color: var(black);
+    box-shadow: rgb(10, 10, 11);
+}
+
+
+@keyframes flutuar {
+
+  0%, 100%{
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
